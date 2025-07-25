@@ -1,0 +1,14 @@
+name: Ping Bot Replit
+
+on:
+  schedule:
+    - cron: '*/1 * * * *'   # roda a cada 1 minuto
+  workflow_dispatch:        # permite rodar manualmente
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Ping Replit URL
+        run: curl -s https://05c2c57c-d19c-466e-a878-f07ee7140e72-00-1q5be5ky55pfm.spock.replit.dev/ > /dev/null
